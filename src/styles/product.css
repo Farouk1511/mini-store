@@ -1,0 +1,44 @@
+.product-box{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: left;
+    /* background-color: aqua; */
+    width: 200px;
+
+}
+
+.product-box span{
+    text-align: left;
+    margin-left: 5px;
+    /* background-color: aqua; */
+    display: block;
+    font-size: 120%;
+    font-weight: bold;
+    color: aliceblue;
+
+}
+
+.product-box .price{
+    font-size: 150%;
+    word-spacing: 5px;
+}
+
+.info{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    /* background-color: bisque; */
+}
+
+.product-box:hover{
+    background-color: beige;
+}
+.product-box:hover span{
+    color: #000;
+}
+

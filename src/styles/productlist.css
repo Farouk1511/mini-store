@@ -1,0 +1,16 @@
+.product-list{
+    padding: 20px;
+}
+
+.product-list-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    font-size: 200%;
+    color: aliceblue;
+    padding: 0;
+}

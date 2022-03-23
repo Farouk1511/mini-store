@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Angelina Jolie Voight",
+    "price": 120
+  },
+  {
+    "id": 2,
+    "name": "Charlize Theron",
+    "price": 110
+  },
+  {
+    "id": 3,
+    "name": "Jessica Alba",
+    "price": 120
+  },
+  {
+    "id": 4,
+    "name": "Megan Denise Fox",
+    "price": 1000
+  },
+  {
+    "id": 5,
+    "name": "Keira Knightley",
+    "price": 110
+  },
+  {
+    "id": 6,
+    "name": "Nina Dobrev",
+    "price": 1255
+  },
+  {
+    "id": 7,
+    "name": "Maria Bellucci",
+    "price": 1231
+  },
+  {
+    "id": 8,
+    "name": "Justin Bieber",
+    "price": 220
+  },
+  {
+    "id": 9,
+    "name": "Daddy Yankee",
+    "price": 520
+  },
+  {
+    "id": 10,
+    "name": "Sean Paul",
+    "price": 720
+  },
+  {
+    "id": 11,
+    "name": "Deadpool",
+    "price": 820
+  },
+  {
+    "id": 12,
+    "name": "Sofia Vergara",
+    "price": 920
+  },
+  {
+    "id": 13,
+    "name": "Offset",
+    "price": 22120
+  },
+  {
+    "id": 14,
+    "name": "Quavo",
+    "price": 10000
+  }
+]

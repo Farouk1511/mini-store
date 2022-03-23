@@ -1,0 +1,29 @@
+.jumbotron{
+
+    display: flex;
+    /* background-color: aqua; */
+    justify-content: space-between;
+    align-items: center;
+    
+    color: #fff;
+}
+
+.carts button{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 150%;
+    font-weight: bold;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.carts button span{
+    margin-left: 10px;
+    border: 2px solid;
+    padding: 3px 5px;
+}
