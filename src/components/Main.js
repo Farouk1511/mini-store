@@ -3,10 +3,16 @@ import ProductList from "./ProductList";
 import Jumbotron from "./Jumbotron";
 
 function Main(props) {
+
+
+
+  
+
+
   return (
     <div>
       <Jumbotron total={props.total} />
-      <ProductList />
+      <ProductList data={props.data} />
     </div>
   );
 }

@@ -1,25 +1,18 @@
 import React from "react";
-import "../styles/jumbotron.css"
-function Jumbotron(props){
+import "../styles/jumbotron.css";
+import Cart from "./Cart";
 
-    return(
-        <div className="jumbotron"> 
-            <div className="title">
-            <h1>Welcome to Freaky Catz</h1>
-            <h2>Shop for your favourite Freaky Ctaz</h2>
-            </div>
-           
+function Jumbotron(props) {
+  return (
+    <div className="jumbotron">
+      <div className="title">
+        <h1>Welcome to Freaky Catz</h1>
+        <h2>Shop for your favourite Freaky Catz</h2>
+      </div>
 
-            <div className="carts">
-                <button>
-                    Cart
-                    <span>{props.total}</span>
-                </button>
-            </div>
-        </div>
-
-    )
-
+      <Cart total={props.total} isHomepage={false} />
+    </div>
+  );
 }
 
-export default Jumbotron
+export default Jumbotron;

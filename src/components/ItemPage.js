@@ -1,61 +1,75 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import products from "../products.json";
+import Cart from "./Cart";
+import "./../styles/itempage.css"
 
-function ItemPage() {
-
-    const paramID = useParams().id
-  const [id, setId] = useState(+paramID)
+function ItemPage(props) {
+  const paramID = useParams().id;
+  const [products, setProducts] = useState(props.data);
+  const [id, setId] = useState(+paramID);
   const [quantity, setQuantity] = useState(0);
-  const [props, setProps] = useState({});
+  const [pageProp, setpageProp] = useState({});
 
- 
-  useEffect(() => { 
-
-    
-
-      console.log("Hello")
+  useEffect(() => {
+    // console.log("Hello");
     products.forEach((prod) => {
       if (prod.id === id) {
-          console.log(prod.id)
-        setProps({
+        
+        setpageProp({
+          pid:prod.id,
           name: prod.name,
-          imgSrc: `https://robohash.org/${prod.id}?set=set4&size=180x180`,
+          imgSrc: `https://robohash.org/${prod.id}?set=set4&size=500x500`,
+          price:prod.price,
           description:
             "Afield Out adds its signature outdoor-focused flair to this black sweat. Crafted from cotton, it’s cut to an oversized fit for a laid-back look and feel, then printed with ‘Alpine Research' branding at the chest.",
         });
       }
     });
-  }, [id]);
+  },[id]);
 
   const increaseQuantity = () => {
-    if (quantity <= 20) {
+    if (quantity <= 19) {
       setQuantity(quantity + 1);
     }
   };
   const decreaseQuantity = () => {
-    if (quantity >= 0) {
+    if (quantity >= 1) {
       setQuantity(quantity - 1);
     }
   };
 
-  const { name, imgSrc, description } = props;
+  const calculateTotal = (id,price,quantity) => {
+    
+    let total = +price * +quantity
+    props.handleClick(id,total,quantity)
+  }
+
+  const { pid,name, imgSrc, description,price } = pageProp;
 
   return (
-    <div>
+    <div className="itempage">
+      <Cart total={props.total} isHomepage={true} />
+
       <div className="main">
-        <img alt={props.name} src={imgSrc} />
-        <div>
-          <button>Add To Cart</button>
-          <div>
+        <img alt={name} src={imgSrc} />
+        <div >
+          <div className="utility" >
+            <h1>{name}</h1>
+            <span className="price">CA ${price}</span>
+            <div> 
+            <span>Quantity:</span>
             <button onClick={decreaseQuantity}>-</button>
-            <span>{quantity}</span>
+            <span className="quantity">{quantity}</span>
             <button onClick={increaseQuantity}>+</button>
+            </div>
+           
+            <button className="atc" onClick={() => calculateTotal(pid,price,quantity)}>Add To Cart</button>
           </div>
+        
         </div>
       </div>
 
-      <div className="descricption">
+      <div className="description">
         <span>{name}</span>
         <p>{description}</p>
       </div>

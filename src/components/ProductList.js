@@ -1,11 +1,12 @@
-import React from "react";
-import products from "../products.json";
+import React, { useState } from "react";
+
 import Product from "./Product";
 import "../styles/productlist.css";
-import ItemPage from "./ItemPage";
+
 import { useNavigate  } from "react-router-dom";
 
-function ProductList() {
+function ProductList(props) {
+  const [products,setProducts] = useState(props.data)
   // const onClick = (id) => {
   //   console.log('Working')
   //   products.forEach((product) => {

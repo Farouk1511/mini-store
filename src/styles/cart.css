@@ -1,0 +1,23 @@
+.cart{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+
+.home ion-icon{
+    cursor: pointer;
+    font-size: 350%;
+    color: aliceblue;
+}
+
+.carts ion-icon{
+    font-size: 130%;
+}
+
+.carts button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
